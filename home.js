@@ -1,5 +1,11 @@
 var icon_str= ["占事略決", "死之鐮", "邁泰奧拉", "占星儀"];
 
+$(function() {
+    $.get('https://spreadsheets.google.com/feeds/list/2PACX-1vS8s1-q9stZWVTj7EdNj9ogWmEMI9P4_c0PNQVuNpm2V-nGvsrqk7OLS1IDY9mS4Fe-lMCGwa2vEijQ/1/public/values?alt=json', function(data) {
+      console.log(data);
+    });
+  });
+  
 function start()
 {   
     tags= [];
