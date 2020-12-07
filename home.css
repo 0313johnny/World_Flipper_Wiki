@@ -1,0 +1,31 @@
+body{
+    /* background-color:coral; */
+    background-image: url("World-Flipper-Feature-image-edited.png");
+    background-size:100%;
+    background-repeat: no-repeat;
+}
+/* .top{
+
+} */
+.main{
+    margin-top:10%;
+    margin-left:25%;
+    margin-right:25%;
+    margin-bottom: 0%;
+    padding:10px;
+    text-align: justify;
+    background-color:white;
+    display:block;
+    width:auto;
+    height:auto;
+}
+.item img{
+    width:50px;
+    transition: all 0.3s;
+}
+.item img:hover{
+    transform: scale(1.2);
+}
+img{
+    margin: 2px;
+}
