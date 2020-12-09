@@ -8,12 +8,12 @@ body{
 
 } */
 .main{
-    position:justify;
+    position: absolute;;
     width:200px;
-    margin-top:120px;
-    margin-left:300px;
-    margin-right:300px;
-    margin-bottom: 0px;
+    top:120px;
+    left:300px;
+    right:300px;
+    bottom: 0px;
     padding:10px;
     text-align: center;
     background-color:white;
@@ -30,4 +30,13 @@ body{
 }
 img{
     margin: 4px;
+}
+.imformation{
+    position: fixed;
+    top:150px;
+    left:1150px;
+    right:10px;
+    bottom:200px;
+    background-color:gray;
+    border:1px black static;
 }
