@@ -1,4 +1,4 @@
-var icon_str= ["占事略決", "死之鐮", "邁泰奧拉", "占星儀"];
+var icon_str= ["acce_0001_total", "acce_0002", "acce_0003", "acce_0003", "acce_0004", "acce_0005_PCollab", "acce_0006_storyevent",  "acce_0007_total" , "acce_0008_ZCollab", "acce_0009_ZCollab"]
 
 $(function() {
     $.get('https://spreadsheets.google.com/feeds/list/2PACX-1vS8s1-q9stZWVTj7EdNj9ogWmEMI9P4_c0PNQVuNpm2V-nGvsrqk7OLS1IDY9mS4Fe-lMCGwa2vEijQ/1/public/values?alt=json', function(data) {
@@ -8,16 +8,8 @@ $(function() {
   
 function start()
 {   
-    tags= [];
-    for(var i=0; i<localStorage.length; i++){
-        tags[i]= localStorage.key(i);
-    }
-    console.log(icon_str.length);
     for(var i=0; i<icon_str.length; i++){
-        var object= {
-            icon: icon_str[i]+".png"
-        };
-        localStorage.setItem("item_"+ icon_str[i], JSON.stringify(object));
+        createNewNode(icon_str[i]);
     }
 }
 // function display(){
@@ -25,9 +17,8 @@ function start()
 // }
 function createNewNode(text ){
     var newE= document.createElement("img");
-    var currentNode = document.getElementById( "main" );
-    newE.setAttribute("src", text+".png");
-    newE.setAttribute("class", "item");
+    var currentNode = document.getElementById( "item_id" );
+    newE.setAttribute("src", "assets/equipments/"+text+".png");
     currentNode.appendChild( newE );
 }
 

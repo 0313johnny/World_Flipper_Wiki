@@ -8,12 +8,14 @@ body{
 
 } */
 .main{
-    margin-top:10%;
-    margin-left:25%;
-    margin-right:25%;
-    margin-bottom: 0%;
+    position:justify;
+    width:200px;
+    margin-top:120px;
+    margin-left:300px;
+    margin-right:300px;
+    margin-bottom: 0px;
     padding:10px;
-    text-align: justify;
+    text-align: center;
     background-color:white;
     display:block;
     width:auto;
@@ -27,5 +29,5 @@ body{
     transform: scale(1.2);
 }
 img{
-    margin: 2px;
+    margin: 4px;
 }
