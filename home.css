@@ -19,11 +19,11 @@ body{
     width:auto;
     height:auto;
 }
-.item img{
+.item_list img{
     width:50px;
     transition: all 0.3s;
 }
-.item img:hover{
+.item_list img:hover{
     transform: scale(1.2);
 }
 img{

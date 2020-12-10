@@ -1,11 +1,14 @@
 var icon_str= ["占事略決", "死之鐮", "邁泰奧拉", "占星儀"];
 
-$(function() {
-    $.get('https://spreadsheets.google.com/feeds/list/2PACX-1vS8s1-q9stZWVTj7EdNj9ogWmEMI9P4_c0PNQVuNpm2V-nGvsrqk7OLS1IDY9mS4Fe-lMCGwa2vEijQ/1/public/values?alt=json', function(data) {
+//World Flipper用的表 https://docs.google.com/spreadsheets/d/1YihcIS-7iApI1GI4pN6XYwyfndb5CbNwAVUEvEl9jyA/edit#gid=0
+var sheetID = "1YihcIS-7iApI1GI4pN6XYwyfndb5CbNwAVUEvEl9jyA"; // 試算表代號
+var gid = "0"; // 工作表代號
+
+    $.getScript('https://spreadsheets.google.com/tq?tqx=responseHandler:display&key=' + sheetID +  "&gid=" + gid, function(data) {
       console.log(data);
     });
-  });
-  
+
+
 function start()
 {   
     tags= [];
@@ -33,3 +36,4 @@ function createNewNode(text ){
 
 
 window.addEventListener("load", start, false);
+
