@@ -2,18 +2,16 @@ body{
     /* background-color:coral; */
     background-image: url("BG_stars.png");
     background-size:100%;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
 }
 /* .top{
 
 } */
-.main{
+.main_list{
     position: absolute;;
-    width:200px;
     top:120px;
-    left:300px;
-    right:300px;
-    bottom: 0px;
+    left:22%;
+    right:22%;
     padding:10px;
     text-align: center;
     background-color:white;
@@ -21,20 +19,20 @@ body{
     width:auto;
     height:auto;
 }
-.item img{
+.item_list img{
     width:50px;
     transition: all 0.3s;
 }
-.item img:hover{
+.item_list img:hover{
     transform: scale(1.2);
 }
 img{
-    margin: 4px;
+    margin: 2px;
 }
 .imformation{
     position: fixed;
     top:150px;
-    left:1150px;
+    left:80%;
     right:10px;
     bottom:200px;
     background-color:gray;
