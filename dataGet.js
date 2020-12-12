@@ -32,6 +32,7 @@ function display(resultJson) {
         console.log(dataGroup);
         
         htmlContent += '<img src= "assets/equipments/';
+        // v表示該格的value 其他還有f(field)等
         htmlContent += dataGroup[1].v + '.png">';
     }
     document.getElementById("test").innerHTML = htmlContent;
