@@ -1,4 +1,3 @@
-
 //World Flipper用的表 https://docs.google.com/spreadsheets/d/1YihcIS-7iApI1GI4pN6XYwyfndb5CbNwAVUEvEl9jyA/edit#gid=0
 function start(){
     document.getElementById("item_list").addEventListener("mousedown", show_imformation, false);
@@ -21,10 +20,12 @@ function show_imformation(e){
 
             // imfor_block裡面裝著資訊欄的所有東東
             imfor_block= document.getElementById("imformation_id");
+            document.setAttribute("class", "imfor_block");
             imfor_block.innerHTML= "yes!"
         }
     }
 }
+
 window.addEventListener("load", start, false);
 
 

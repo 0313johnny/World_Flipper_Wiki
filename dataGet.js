@@ -28,5 +28,6 @@ function display(resultJson) {
         var dataLength = dataGroup.length;
         console.log(dataGroup);
         createNewNode(dataGroup[1].v );
+
     }
 };

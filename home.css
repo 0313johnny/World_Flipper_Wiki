@@ -1,5 +1,4 @@
 body{
-    /* background-color:coral; */
     background-image: url("BG_stars.png");
     background-size:100%;
     background-repeat: repeat;
@@ -29,12 +28,16 @@ body{
 img{
     margin: 2px;
 }
-.imformation{
+/* .imformation{
+    
+} */
+.imfor_block{
     position: fixed;
     top:150px;
     left:80%;
     right:10px;
     bottom:200px;
+    padding:20px;
     background-color:gray;
     border:1px black static;
 }
