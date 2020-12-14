@@ -1,8 +1,16 @@
 //World Flipper用的表 https://docs.google.com/spreadsheets/d/1YihcIS-7iApI1GI4pN6XYwyfndb5CbNwAVUEvEl9jyA/edit#gid=0
 function start(){
+    display();
     document.addEventListener("mousedown", show_imformation, false);
 }
-function createNewNode(text ){
+
+// 利用DataBase顯示所有icon
+function display(){
+    for(var i=0; i<DataBase.length; i++){
+        createNewNode(DataBase[i][1].v)
+    }
+}
+function createNewNode(text){
     var newE= document.createElement("img");
     var currentNode = document.getElementById( "item_list" );
     newE.setAttribute("id", "item_"+text);
@@ -10,7 +18,7 @@ function createNewNode(text ){
     currentNode.appendChild( newE );
 }
 
-// 滑鼠點下會跳到這個function，用途為判斷滑鼠在哪
+// 滑鼠點下會跳到這個function
 function show_imformation(e){
 
     // 若是沒有點到圖片，則隱藏介紹框。

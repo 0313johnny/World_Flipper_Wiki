@@ -7,13 +7,13 @@ body{
 
 } */
 .main_list{
+    border:1px solid #cee3e9;background:#f1f7f9   ; 
     position: absolute;;
     top:120px;
     left:22%;
     right:22%;
     padding:10px;
     text-align: center;
-    background-color:white;
     display:block;
     width:auto;
     height:auto;

@@ -10,14 +10,14 @@ $(document).ready(function () {
     // SQL 語法，目前是設定F欄的值>300才會撈出來
     //var sql = encodeURI("select * where A > 300"); 
 
-    var callback = "display"; // 回呼函數名稱
+    var callback = "Save"; // 回呼函數名稱
     var url = "https://spreadsheets.google.com/tq?tqx=responseHandler:" + callback + "&key=" + sheetID + "&gid=" + gid;
     console.log(url);
     $.getScript(url); //取回Google Spreadsheet API回傳之JS code並執行
 });
 
-//回呼函數
-function display(resultJson) {
+//回呼函數，這部分只做將引入的data放進database
+function Save(resultJson) {
 
     console.log(resultJson); //印出回傳結果，可仔細觀察一下Google試算表回傳之JSON內容
     var rowArray = resultJson.table.rows;
@@ -25,10 +25,7 @@ function display(resultJson) {
     // <img src= "assets/equipments/main_chapter_orb_1.png">
     for (var i = 0; i < rowLength; i++) {
         var dataGroup = rowArray[i].c;
-        createNewNode(dataGroup[1].v);
-
         // 建立成一個很多dictionary的list;
         DataBase.push(dataGroup)
     }
-    console.log(DataBase[0][1].v)
 };
