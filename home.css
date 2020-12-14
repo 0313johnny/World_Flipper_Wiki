@@ -28,16 +28,19 @@ body{
 img{
     margin: 2px;
 }
-/* .imformation{
-    
-} */
-.imfor_block{
+.imformation{
+    color:black;
+    background-color: white;
+
+}
+.imfor_block_set{
     position: fixed;
-    top:150px;
-    left:80%;
-    right:10px;
-    bottom:200px;
+    top:600px;
+    left:25%;
+    right:25%;
+    bottom:0px;
     padding:20px;
     background-color:gray;
     border:1px black static;
+    display:none;
 }

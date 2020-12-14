@@ -1,5 +1,7 @@
 //World Flipper用的表 https://docs.google.com/spreadsheets/d/1YihcIS-7iApI1GI4pN6XYwyfndb5CbNwAVUEvEl9jyA/edit#gid=0
 //代號為 1YihcIS-7iApI1GI4pN6XYwyfndb5CbNwAVUEvEl9jyA
+var DataBase= []
+
 $(document).ready(function () {
     var sheetID = "1YihcIS-7iApI1GI4pN6XYwyfndb5CbNwAVUEvEl9jyA"; // 試算表代號
     var gid = "0"; // 工作表代號
@@ -11,7 +13,6 @@ $(document).ready(function () {
     var callback = "display"; // 回呼函數名稱
     var url = "https://spreadsheets.google.com/tq?tqx=responseHandler:" + callback + "&key=" + sheetID + "&gid=" + gid;
     console.log(url);
-
     $.getScript(url); //取回Google Spreadsheet API回傳之JS code並執行
 });
 
@@ -23,11 +24,11 @@ function display(resultJson) {
     var rowLength = rowArray.length;
     // <img src= "assets/equipments/main_chapter_orb_1.png">
     for (var i = 0; i < rowLength; i++) {
-
         var dataGroup = rowArray[i].c;
-        var dataLength = dataGroup.length;
-        console.log(dataGroup);
-        createNewNode(dataGroup[1].v );
+        createNewNode(dataGroup[1].v);
 
+        // 建立成一個很多dictionary的list;
+        DataBase.push(dataGroup)
     }
+    console.log(DataBase[0][1].v)
 };
