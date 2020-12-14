@@ -22,7 +22,7 @@ function createNewNode(text){
 function show_imformation(e){
 
     // 若是沒有點到圖片，則隱藏介紹框。
-    document.getElementById("imfor_block_set_id").style.display="none";
+    document.getElementById("infor_block_set_id").style.display="none";
 
     if ( e.target.id.toLowerCase().substr(0, 5) == "item_"){
         // 確認按下的鍵是滑鼠左鍵（button==1）
@@ -32,9 +32,9 @@ function show_imformation(e){
                 if(DataBase[i][1].v == clicked_block.id.substr(5))
                 {
                     // 顯示介紹框，以及更改內容
-                    document.getElementById("imfor_block_set_id").style.display="block";
-                    document.getElementById("imfor_name").innerHTML= "名稱："+DataBase[i][3].v;
-                    document.getElementById("imfor_contribute").innerHTML= "介紹："+DataBase[i][4].v;
+                    document.getElementById("infor_block_set_id").style.display="block";
+                    document.getElementById("infor_name").innerHTML= "名稱："+DataBase[i][3].v;
+                    document.getElementById("infor_contribute").innerHTML= "介紹："+DataBase[i][4].v;
                     break;
                 }
                 

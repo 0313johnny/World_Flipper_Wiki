@@ -28,12 +28,12 @@ body{
 img{
     margin: 2px;
 }
-.imformation{
+.information{
     color:black;
     background-color: white;
 
 }
-.imfor_block_set{
+.infor_block_set{
     position: fixed;
     top:600px;
     left:25%;
