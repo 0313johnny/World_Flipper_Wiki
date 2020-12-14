@@ -1,39 +1,43 @@
-var icon_str= ["占事略決", "死之鐮", "邁泰奧拉", "占星儀"];
-
 //World Flipper用的表 https://docs.google.com/spreadsheets/d/1YihcIS-7iApI1GI4pN6XYwyfndb5CbNwAVUEvEl9jyA/edit#gid=0
-var sheetID = "1YihcIS-7iApI1GI4pN6XYwyfndb5CbNwAVUEvEl9jyA"; // 試算表代號
-var gid = "0"; // 工作表代號
-
-    $.getScript('https://spreadsheets.google.com/tq?tqx=responseHandler:display&key=' + sheetID +  "&gid=" + gid, function(data) {
-      console.log(data);
-    });
-
-
-function start()
-{   
-    tags= [];
-    for(var i=0; i<localStorage.length; i++){
-        tags[i]= localStorage.key(i);
-    }
-    console.log(icon_str.length);
-    for(var i=0; i<icon_str.length; i++){
-        var object= {
-            icon: icon_str[i]+".png"
-        };
-        localStorage.setItem("item_"+ icon_str[i], JSON.stringify(object));
-    }
+function start(){
+    document.addEventListener("mousedown", show_imformation, false);
 }
-// function display(){
-
-// }
 function createNewNode(text ){
     var newE= document.createElement("img");
-    var currentNode = document.getElementById( "main" );
-    newE.setAttribute("src", text+".png");
-    newE.setAttribute("class", "item");
+    var currentNode = document.getElementById( "item_list" );
+    newE.setAttribute("id", "item_"+text);
+    newE.setAttribute("src", "assets/equipments/"+text+".png");
     currentNode.appendChild( newE );
+}
+
+// 滑鼠點下會跳到這個function，用途為判斷滑鼠在哪
+function show_imformation(e){
+
+    // 若是沒有點到圖片，則隱藏介紹框。
+    document.getElementById("imfor_block_set_id").style.display="none";
+
+    if ( e.target.id.toLowerCase().substr(0, 5) == "item_"){
+        // 確認按下的鍵是滑鼠左鍵（button==1）
+        if(e.buttons== 1){
+            var clicked_block= document.getElementById(e.target.id.toLowerCase())
+            for(var i=0; i<DataBase.length; i++){
+                if(DataBase[i][1].v == clicked_block.id.substr(5))
+                {
+                    // 顯示介紹框，以及更改內容
+                    document.getElementById("imfor_block_set_id").style.display="block";
+                    document.getElementById("imfor_name").innerHTML= "名稱："+DataBase[i][3].v;
+                    document.getElementById("imfor_contribute").innerHTML= "介紹："+DataBase[i][4].v;
+                    break;
+                }
+                
+            }
+        }
+    }
+    console.log("pass")
 }
 
 
 window.addEventListener("load", start, false);
+
+
 
