@@ -24,7 +24,7 @@ function show_imformation(e){
     // 若是沒有點到圖片，則隱藏介紹框。
     document.getElementById("infor_block_set_id").style.display="none";
 
-    if ( e.target.id.toLowerCase().substr(0, 5) == "item_"){
+    if ( e.target.id.substr(0, 5).toLowerCase() == "item_"){
         // 確認按下的鍵是滑鼠左鍵（button==1）
         if(e.buttons== 1){
             var clicked_block= document.getElementById(e.target.id.toLowerCase())
@@ -41,7 +41,6 @@ function show_imformation(e){
             }
         }
     }
-    console.log("pass")
 }
 
 
