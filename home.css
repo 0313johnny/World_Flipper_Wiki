@@ -13,10 +13,10 @@ body{
     left:22%;
     right:22%;
     padding:10px;
-    text-align: center;
     display:block;
     width:auto;
     height:auto;
+    float:left;
 }
 .item_list img{
     width:50px;
@@ -42,4 +42,11 @@ img{
     background-color:gray;
     border:1px black static;
     display:none;
+}
+.float_infor_block{
+    background:#00ffccc3;
+    width: 200px;
+    text-align: center;
+    display:none;
+    position:absolute;
 }
