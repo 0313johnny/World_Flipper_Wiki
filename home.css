@@ -32,6 +32,8 @@ img{
     color:black;
     background-color: white;
      border-radius: 8px;
+         margin-left: 10%;
+    margin-right: 10%;
 }
 .infor_block_set{
     text-justify: left;
@@ -42,8 +44,7 @@ img{
     right:25%;
     bottom:0px;
     padding:10px;
-    margin-left: 10%;
-    margin-right: 10%;
+
     background-color:gray;
     border:1px black static;
     display:none;
