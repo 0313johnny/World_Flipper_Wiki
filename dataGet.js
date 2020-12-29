@@ -4,7 +4,8 @@ var DataBase= []
 
 $(document).ready(function () {
     var sheetID = "1YihcIS-7iApI1GI4pN6XYwyfndb5CbNwAVUEvEl9jyA"; // 試算表代號
-    var gid = "0"; // 工作表代號
+    var gid = "1"; // 工作表代號
+    // 0：武器（日文），1:武器（中文）
 
     //encodeURI: 把不合法的字元轉為URL可用字元
     // SQL 語法，目前是設定F欄的值>300才會撈出來
@@ -19,7 +20,7 @@ $(document).ready(function () {
 //回呼函數，這部分只做將引入的data放進database
 function Save(resultJson) {
 
-    console.log(resultJson); //印出回傳結果，可仔細觀察一下Google試算表回傳之JSON內容
+    console.log(resultJson.table.rows); //印出回傳結果，可仔細觀察一下Google試算表回傳之JSON內容
     var rowArray = resultJson.table.rows;
     var rowLength = rowArray.length;
     // <img src= "assets/equipments/main_chapter_orb_1.png">
@@ -28,4 +29,7 @@ function Save(resultJson) {
         // 建立成一個很多dictionary的list;
         DataBase.push(dataGroup)
     }
+    localStorage.setItem("DataBase", JSON.stringify(DataBase));
 };
+
+window.addEventListener("load", Save, false)

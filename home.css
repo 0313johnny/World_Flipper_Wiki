@@ -48,5 +48,5 @@ img{
     width: 200px;
     text-align: center;
     display:none;
-    position:absolute;
+    position:fixed;
 }
