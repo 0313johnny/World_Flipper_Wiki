@@ -31,22 +31,29 @@ img{
 .information{
     color:black;
     background-color: white;
+     border-radius: 8px;
 }
 .infor_block_set{
+    text-justify: left;
     position: fixed;
     top:600px;
+    text-align: center;
     left:25%;
     right:25%;
     bottom:0px;
-    padding:20px;
+    padding:10px;
+    margin-left: 10%;
+    margin-right: 10%;
     background-color:gray;
     border:1px black static;
     display:none;
+    /* border-radius: 2px; */
 }
 .float_infor_block{
-    background:#00ffccc3;
+    background:#eff8739d;
     width: 200px;
     text-align: center;
     display:none;
     position:fixed;
+    border-radius: 12px;
 }
