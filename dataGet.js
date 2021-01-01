@@ -30,6 +30,7 @@ function Save(resultJson) {
         DataBase.push(dataGroup)
     }
     localStorage.setItem("DataBase", JSON.stringify(DataBase));
+    localStorage.setItem("is_loaded", JSON.stringify("1"));    
 };
 
 window.addEventListener("load", Save, false)
