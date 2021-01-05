@@ -7,44 +7,54 @@ body{
 
 } */
 .main_list{
+    border:1px solid #cee3e9;background:#f1f7f9   ; 
     position: absolute;;
     top:120px;
     left:22%;
     right:22%;
     padding:10px;
-    text-align: center;
-    background-color:white;
     display:block;
     width:auto;
     height:auto;
+    float:left;
 }
-
 .item_list img{
     width:50px;
     transition: all 0.3s;
 }
-
 .item_list img:hover{
     transform: scale(1.2);
 }
-
 img{
     margin: 2px;
 }
-
 .information{
     color:black;
     background-color: white;
+     border-radius: 8px;
+         margin-left: 10%;
+    margin-right: 10%;
 }
-
-.info_block_set{
+.infor_block_set{
+    text-justify: left;
     position: fixed;
     top:600px;
+    text-align: center;
     left:25%;
     right:25%;
     bottom:0px;
-    padding:20px;
+    padding:10px;
+
     background-color:gray;
     border:1px black static;
     display:none;
+    /* border-radius: 2px; */
+}
+.float_infor_block{
+    background:#eff8739d;
+    width: 200px;
+    text-align: center;
+    display:none;
+    position:fixed;
+    border-radius: 12px;
 }

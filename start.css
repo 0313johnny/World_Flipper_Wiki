@@ -1,0 +1,14 @@
+.body{
+    background-image: url("BG_stars.png");
+    background-repeat: repeat;
+    font-family:fantasy;
+}
+.button{
+    font-size: large;
+    position:auto;
+    text-align: center;
+    top:50%;
+    background-color: aqua;
+    width: 120px;
+    height:100px;
+}
