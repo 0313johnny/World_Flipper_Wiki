@@ -18,22 +18,26 @@ body{
     width:auto;
     height:auto;
 }
+
 .item_list img{
     width:50px;
     transition: all 0.3s;
 }
+
 .item_list img:hover{
     transform: scale(1.2);
 }
+
 img{
     margin: 2px;
 }
-.imformation{
+
+.information{
     color:black;
     background-color: white;
-
 }
-.imfor_block_set{
+
+.info_block_set{
     position: fixed;
     top:600px;
     left:25%;
