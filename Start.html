@@ -1,22 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <title>Loading page</title>
-        <meta charset= "utf-8">
-        <link rel = "stylesheet" type = "text/css" href = "start.css">
-        <script src = "jquery-3.5.1.js"></script>
+        <title>World Flipper Database</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <!-- Bootstrap4 -->
+
         <script src = "dataGet.js"></script>
         <script src = "start.js"></script>
-        <script>
-        </script>
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&display=swap" rel="stylesheet">
+        <!-- 引入思源黑體Noto Sans -->
+
+        <!-- CSS -->
+        <style>
+            body{
+                background-image: url("BG_stars.png");
+                background-repeat: repeat;
+                height: 100vh;
+                font-family: 'Noto Sans TC','微軟正黑體', sans-serif;
+            }
+            #display{
+                position: absolute;
+                top: 40%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            #myclass{
+                font-family: 'Noto Sans TC', sans-serif;
+            }
+        </style>
     </head>
+
     <body>
-        <div class= "button">
-            <button onclick="doclick(0)" class= "J">日本語</button>
-            <hr>
-            <button onclick= "doclick(1)" class ="C">繁體中文</button>
+
+        <div class="container p-3 my-3 bg-dark text-white text-center" id="display">
+            <h1>Choose the Language</h1>
+            <button type="button" class="btn btn-info btn-lg myclass"onclick="doclick(0)">日本語</button>
+            <button type="button" class="btn btn-info btn-lg myclass"onclick= "doclick(1)">繁體中文</button>
         </div>
-            
-        
     </body>
+
 </html>

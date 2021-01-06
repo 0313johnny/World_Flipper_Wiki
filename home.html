@@ -6,19 +6,30 @@
         <link rel = "stylesheet" type = "text/css" href = "home.css">
         <script src = "jquery-3.5.1.js"></script>
         <script src = "home.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <!-- Bootstrap4 -->
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&display=swap" rel="stylesheet">
         <!-- <script src = "dataGet.js"></script> -->
     </head>
     <body>
-        <nav class= "top">
-            <ul>
-                <li><a href= "home.html">HOME</a></li>
-                <li><a href= "character.html">角色</a></li>
-                <li><a href= "weapon.html">武器</a></li>
-                <li><a href= "character.html">隊伍編輯</a></li>
+        <nav class= "navbar navbar-expand-lg bg-dark navbar-dark justify-content-center fixed-top">
+            <a class="navbar-brand" href= "home.html">HOME</a>
+            <ul class= "navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href= "character.html">角色</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href= "weapon.html">武器</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href= "character.html">隊伍編輯</a>
+                </li>
             </ul>
         </nav>
         <div class= "main_list" id="main">
-            
             <div class= "item_list" id= "item_list">
             </div>
         </div>
