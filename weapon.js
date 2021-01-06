@@ -29,8 +29,8 @@ function show_little_block(e){
                 block[0].style.left = event.clientX + 20 + "px";
                 block[0].style.top = event.clientY +10 + "px";
                 block[0].style.display = "block";
-                $("#B_name").html("名稱："+DataBase[i][2].v);
-                $("#B_contri").html("介紹："+DataBase[i][3].v);
+                document.getElementById("B_name").innerHTML= "名稱："+DataBase[i][2].v;
+                document.getElementById("B_contri").innerHTML= "介紹："+DataBase[i][3].v;
                 break;
             }
         }
@@ -57,8 +57,8 @@ function show_imformation(e){
                 // 顯示介紹框，以及更改內容
                 console.log(DataBase[i][1])
                 document.getElementById("info_block_set_id").style.display="block";
-                $("#I_name").html("名稱："+DataBase[i][2].v);
-                $("#I_contri").html("介紹："+DataBase[i][3].v);
+                document.getElementById("I_name").innerHTML= "名稱："+DataBase[i][2].v;
+                document.getElementById("I_contri").innerHTML= "介紹："+DataBase[i][3].v;
                 break;
             }
             

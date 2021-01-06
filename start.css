@@ -3,12 +3,30 @@
     background-repeat: repeat;
     font-family:fantasy;
 }
-.button{
-    font-size: large;
-    position:auto;
-    text-align: center;
-    top:50%;
-    background-color: aqua;
-    width: 120px;
+.J{
+    background-color: black;
+    color:rgba(255, 255, 255, 0.591);
+    font-size:40px;
+    width: 180px;
     height:100px;
+    text-align: center;
+    border-radius: 10px;
+}
+.C{
+    background-color: black;
+    color:rgba(255, 255, 255, 0.591);
+    font-size:40px;
+    width: 180px;
+    height:100px;
+    border-radius: 10px;
+}
+.button{
+    background-color: rgb(164, 189, 199);
+    top:35%;
+    left:45%;
+    position:absolute;
+    font-size: large;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
 }
