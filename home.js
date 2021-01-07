@@ -15,8 +15,8 @@ function display(){
     }
 }
 function show_little_block(e){
-    var block = document.getElementsByClassName("float_infor_block");
-    // var block = $("#float_infor_block").hide();
+    var block = document.getElementsByClassName("float_info_block");
+    // var block = $("#float_info_block").hide();
     // block.hide()
     block[0].style.display = "none";
     if ( e.target.id.substr(0, 5).toLowerCase() == "item_"){
@@ -48,7 +48,7 @@ function createNewNode(text){
 function show_imformation(e){
 
     // 若是沒有點到圖片，則隱藏介紹框。
-    document.getElementById("infor_block_set_id").style.display="none";
+    document.getElementById("info_block_set_id").style.display="none";
     if(e.buttons== 1){
         var clicked_block= document.getElementById(e.target.id)
         for(var i=0; i<DataBase.length; i++){
@@ -56,7 +56,7 @@ function show_imformation(e){
             {
                 // 顯示介紹框，以及更改內容
                 console.log(DataBase[i][1])
-                document.getElementById("infor_block_set_id").style.display="block";
+                document.getElementById("info_block_set_id").style.display="block";
                 document.getElementById("I_name").innerHTML= "名稱："+DataBase[i][2].v;
                 document.getElementById("I_contri").innerHTML= "介紹："+DataBase[i][3].v;
                 break;
