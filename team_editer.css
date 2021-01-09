@@ -1,0 +1,67 @@
+#main-container {
+    padding-top: 80px;
+    margin: 0 auto;
+    position: relative;
+}
+#main-container .content {
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 1080px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+#main-container .content .left-content {
+    width: 250px;
+    height: 600px;
+    position: relative;
+    background-color: aqua;
+    overflow: auto;
+}
+#main-container .content .left-content #character-list {
+    position: absolute;
+    top: 0px;
+    width: 250px;
+    height: 600px;
+}
+
+#main-container .content .mid-content {
+    display: flex;
+    justify-content: space-around;
+    width: 550px;
+    height: 600px;
+    background-color:darkcyan;
+    position: relative;
+}
+#main-container .content .mid-content .teammate {
+    position: absolute;
+    width: 190px;
+}
+/*
+#main-container .content .mid-content .teammate .main
+#main-container .content .mid-content .teammate .unison
+#main-container .content .mid-content .teammate .equipments
+#main-container .content .mid-content .teammate .ability-soul
+*/
+#main-container .content .right-content {
+    width: 250px;
+    height: 600px;
+    position: relative;
+    background-color: aqua;
+    overflow: auto;
+}
+#main-container .content .right-content #equipments-list {
+    position: absolute;
+    top: 0px;
+    width: 250px;
+    height: 600px;
+}
+#main-container .content .mid-content .save-as-image{
+    position: absolute;
+    align-self: flex-end;
+    width: 36px;
+    height: 10px;
+    background-color: deeppink;
+}

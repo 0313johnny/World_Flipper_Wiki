@@ -1,6 +1,6 @@
 .content {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     width: 920px;
     margin: 0 auto;
