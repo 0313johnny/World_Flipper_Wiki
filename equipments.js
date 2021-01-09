@@ -1,8 +1,12 @@
 //World Flipper用的表 https://docs.google.com/spreadsheets/d/1YihcIS-7iApI1GI4pN6XYwyfndb5CbNwAVUEvEl9jyA/edit#gid=0
-var DataBase= JSON.parse(localStorage.getItem("DataBase"))
+var DataBase;
 var language= JSON.parse(localStorage.getItem("language"));
+if(language== 0)
+    DataBase= JSON.parse(localStorage.getItem("DataBase_equipments_JP"));
+else if(language== 1)
+    DataBase= JSON.parse(localStorage.getItem("DataBase_equipments_CH_TW"));
+
 function start(){
-    
     display();
     document.addEventListener("mousedown", show_imformation, false);
     document.addEventListener("mouseover", show_little_block, false);
@@ -29,8 +33,8 @@ function show_little_block(e){
                 block[0].style.left = event.clientX + 20 + "px";
                 block[0].style.top = event.clientY +10 + "px";
                 block[0].style.display = "block";
-                document.getElementById("B_name").innerHTML= "名稱："+DataBase[i][2].v;
-                document.getElementById("B_contri").innerHTML= "介紹："+DataBase[i][3].v;
+                $("#B_name").html("名稱："+DataBase[i][2].v);
+                $("#B_contri").html("介紹："+DataBase[i][3].v);
                 break;
             }
         }
@@ -57,8 +61,8 @@ function show_imformation(e){
                 // 顯示介紹框，以及更改內容
                 console.log(DataBase[i][1])
                 document.getElementById("info_block_set_id").style.display="block";
-                document.getElementById("I_name").innerHTML= "名稱："+DataBase[i][2].v;
-                document.getElementById("I_contri").innerHTML= "介紹："+DataBase[i][3].v;
+                $("#I_name").html("名稱："+DataBase[i][2].v);
+                $("#I_contri").html("介紹："+DataBase[i][3].v);
                 break;
             }
             
