@@ -7,7 +7,7 @@
     display:flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    width: 1080px;
+    width: 1280px;
     height: 100%;
     margin: 0 auto;
     position: relative;
@@ -29,20 +29,23 @@
 
 #main-container .content .mid-content {
     display: flex;
-    justify-content: space-around;
-    width: 550px;
+    justify-content: space-evenly;
+    width: 750px;
     height: 600px;
     background-color:darkcyan;
     position: relative;
 }
 #main-container .content .mid-content .teammate {
-    position: absolute;
-    width: 190px;
+    position: relative;
+    top: 10px;
+    width: 245px;
+    height: 300px;
+    background-color:deepskyblue;
 }
-/*
-#main-container .content .mid-content .teammate .main
-#main-container .content .mid-content .teammate .unison
+
+/*#main-container .content .mid-content .teammate .main
 #main-container .content .mid-content .teammate .equipments
+#main-container .content .mid-content .teammate .unison
 #main-container .content .mid-content .teammate .ability-soul
 */
 #main-container .content .right-content {
