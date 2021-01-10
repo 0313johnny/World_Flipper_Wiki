@@ -19,6 +19,17 @@
     position: relative;
     background-color: aqua;
     overflow: auto;
+    text-align: center;
+}
+#main-container .content .left-content img{
+    width:50px;
+    transition: all 0.3s;
+}
+#main-container .content .left-content img:hover{
+    transform: scale(1.2);
+}
+#main-container .content .left-content img{
+    margin: 5px;
 }
 #main-container .content .left-content #character-list {
     position: absolute;
@@ -38,22 +49,47 @@
 #main-container .content .mid-content .teammate {
     position: relative;
     top: 10px;
-    width: 245px;
+    width: 250px;
     height: 300px;
     background-color:deepskyblue;
 }
 
-/*#main-container .content .mid-content .teammate .main
-#main-container .content .mid-content .teammate .equipments
-#main-container .content .mid-content .teammate .unison
-#main-container .content .mid-content .teammate .ability-soul
-*/
+/* #main-container .content .mid-content .teammate .main */
+#main-container .content .mid-content .teammate .equipments{
+    border: 2px solid black;
+    border-radius: 10px;
+    position: relative;
+    left:155px;
+    top:100px;
+    width:80px;
+    height:80px;
+    transition: all 0.3s;
+}
+#main-container .content .mid-content .teammate .equipments img{
+    width:80px;
+    height:80px;
+    transform: translate(-1.9px,-1.9px);
+}
+/* #main-container .content .mid-content .teammate .unison
+#main-container .content .mid-content .teammate .ability-soul */
+
 #main-container .content .right-content {
     width: 250px;
     height: 600px;
     position: relative;
     background-color: aqua;
     overflow: auto;
+    text-align: center;
+}
+#main-container .content .right-content img{
+    width:50px;
+    transition: all 0.3s;
+}
+#main-container .content .right-content img:hover{
+    transform: scale(1.2);
+}
+#main-container .content .right-content img{
+    margin: 2px;
 }
 #main-container .content .right-content #equipments-list {
     position: absolute;

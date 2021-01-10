@@ -1,9 +1,9 @@
 //World Flipper用的表 https://docs.google.com/spreadsheets/d/1YihcIS-7iApI1GI4pN6XYwyfndb5CbNwAVUEvEl9jyA/edit#gid=0
 //代號為 1YihcIS-7iApI1GI4pN6XYwyfndb5CbNwAVUEvEl9jyA
-var DataBase= []
-var DataBase_chinese= []
-var DataBase_character_J= []
-var DataBase_character_C= []
+var DataBase_equipments_JP= []
+var DataBase_equipments_CH_TW= []
+var DataBase_character_JP= []
+var DataBase_character_CH_TW= []
 
 $(document).ready(function () {
     var sheetID = "1YihcIS-7iApI1GI4pN6XYwyfndb5CbNwAVUEvEl9jyA"; // 試算表代號
@@ -39,9 +39,9 @@ function Save0(resultJson) {
     for (var i = 0; i < rowLength; i++) {
         var dataGroup = rowArray[i].c;
         // 建立成一個很多dictionary的list;
-        DataBase.push(dataGroup)
+        DataBase_equipments_JP.push(dataGroup)
     }
-    localStorage.setItem("DataBase", JSON.stringify(DataBase));
+    localStorage.setItem("DataBase_equipments_JP", JSON.stringify(DataBase_equipments_JP));
     localStorage.setItem("is_loaded", JSON.stringify("1"));    
 };
 
@@ -54,9 +54,9 @@ function Save1(resultJson) {
     for (var i = 0; i < rowLength; i++) {
         var dataGroup = rowArray[i].c;
         // 建立成一個很多dictionary的list;
-        DataBase_chinese.push(dataGroup)
+        DataBase_equipments_CH_TW.push(dataGroup)
     }
-    localStorage.setItem("DataBase_chinese", JSON.stringify(DataBase_chinese));
+    localStorage.setItem("DataBase_equipments_CH_TW", JSON.stringify(DataBase_equipments_CH_TW));
     localStorage.setItem("is_loaded", JSON.stringify("1"));    
 };
 function Save2(resultJson) {
@@ -68,9 +68,9 @@ function Save2(resultJson) {
     for (var i = 0; i < rowLength; i++) {
         var dataGroup = rowArray[i].c;
         // 建立成一個很多dictionary的list;
-        DataBase_character_J.push(dataGroup)
+        DataBase_character_JP.push(dataGroup)
     }
-    localStorage.setItem("DataBase_character_J", JSON.stringify(DataBase_character_J));
+    localStorage.setItem("DataBase_character_JP", JSON.stringify(DataBase_character_JP));
     localStorage.setItem("is_loaded", JSON.stringify("1"));    
 };
 function Save3(resultJson) {
@@ -82,8 +82,8 @@ function Save3(resultJson) {
     for (var i = 0; i < rowLength; i++) {
         var dataGroup = rowArray[i].c;
         // 建立成一個很多dictionary的list;
-        DataBase_character_C.push(dataGroup)
+        DataBase_character_CH_TW.push(dataGroup)
     }
-    localStorage.setItem("DataBase_character_C", JSON.stringify(DataBase_character_C));
+    localStorage.setItem("DataBase_character_CH_TW", JSON.stringify(DataBase_character_CH_TW));
     localStorage.setItem("is_loaded", JSON.stringify("1"));    
 };

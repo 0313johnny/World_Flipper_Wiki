@@ -1,8 +1,11 @@
 //World Flipper用的表 https://docs.google.com/spreadsheets/d/1YihcIS-7iApI1GI4pN6XYwyfndb5CbNwAVUEvEl9jyA/edit#gid=0
-var DataBase= JSON.parse(localStorage.getItem("DataBase"))
+var DataBase;
 var language= JSON.parse(localStorage.getItem("language"));
+if(language== 0)
+    DataBase= JSON.parse(localStorage.getItem("DataBase_equipments_JP"));
+else 
+    DataBase= JSON.parse(localStorage.getItem("DataBase_equipments_CH_TW"));
 function start(){
-    
     display();
     document.addEventListener("mousedown", show_imformation, false);
     document.addEventListener("mouseover", show_little_block, false);
