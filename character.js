@@ -57,9 +57,9 @@ function change_info(clicked_id){
       $('#attr1').attr('class', attr_class[parseInt(info[5].v)]);
       $('.cv').html('CV:'+info[20].v);
       $('.name').html(info[2].v);
-      $('.action-dd').html(info[18].v);
-      $('.skill_detail').html(info[19].v);
-      $('.intro').html(info[19].v);
+      $('#action-dd').html(info[18].v);
+      $('#skill_detail').html(info[19].v);
+      $('#intro').html(info[21].v);
       $('.left-content').html('<img src="assets/character/'+clicked_id+'/ui/full_shot_1440_1920_0.png">');
       break;
     }
