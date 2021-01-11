@@ -43,20 +43,24 @@ function createNewNode_character(text){
   currentNode.appendChild( newE );
 }
 function change_info(clicked_id){
+  var ATTR= ['火','水','雷','風','光','暗']
+  var attr_class= ['red', 'blie', 'yellow', 'green', 'white','black']
   for(var i=0; i<DataBase_character.length; i++){
     if(DataBase_character[i][1].v == clicked_id){
       var info= DataBase_character[i]
       $('#sex').html(info[8].v)
-      $('#pf').html(info[5].v)
-      $('#rarity').html(info[17].v)
+      $('#pf').html(info[7].v)
+      $('#rarity').html(info[4].v)
       $('#race').html(info[6].v)
-      $('#attr').html(info[7].v)
+      $('#attr2').html(ATTR[parseInt(info[5].v)])
+      $('#attr2').attr('class', attr_class[parseInt(info[5].v)])
+      $('#attr1').attr('class', attr_class[parseInt(info[5].v)])
       $('.cv').html('CV:'+info[20].v)
       $('.name').html(info[2].v)
       $('.action-dd').html(info[18].v)
       $('.skill_detail').html(info[19].v)
       $('.intro').html(info[19].v)
-      $('.visual').html('<img src="assets/character/'+clicked_id+'/ui/full_shot_1440_1920_0.png" alt="">')
+      $('.visual').html('<img src="assets/character/'+clicked_id+'/ui/full_shot_1440_1920_0.png" width= "">')
       break;
     }
   }
