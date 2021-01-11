@@ -80,13 +80,13 @@ function start(){
                     if('main'== text_class){
                         const source = localStorage.getItem('dragtitle')
                         var node= document.createElement('img')
-                        node.setAttribute("src",source+'thumb_party_main_0.png')
+                        node.setAttribute("src",source+'thumb_party_main_1.png')
                         ev.target.appendChild(node)
                     }
                     else if('unison'== text_class){                 
                         const source = localStorage.getItem('dragtitle')
                         var node= document.createElement('img')
-                        node.setAttribute("src",source+'square_1.png')
+                        node.setAttribute("src",source+'thumb_party_unison_1.png')
                         ev.target.appendChild(node)
                     }
                 }
