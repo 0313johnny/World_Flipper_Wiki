@@ -105,14 +105,14 @@ function start(){
                         node.setAttribute("src",'assets/ui/border_dark.png')
                         node.style.backgroundImage='url("'+source+'_soul.png")'
                         ev.target.appendChild(node)
-                        // ev.target.style.border= "none"
                     }
                 }
             })
             dropzone.addEventListener('click', (ev) => {
                 console.log(ev.target.nodeName) 
                 if(ev.target.nodeName=="IMG")
-                    ev.target.style.display= "none"
+                    // ev.target.style.display= "none"
+                    ev.target.remove()
             })
         });
     }
