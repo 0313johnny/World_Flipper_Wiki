@@ -80,13 +80,15 @@ function start(){
                     if('main'== text_class){
                         const source = localStorage.getItem('dragtitle')
                         var node= document.createElement('img')
-                        node.setAttribute("src",source+'thumb_party_main_0.png')
+                        node.setAttribute("src",'assets/ui/border_main.png')
+                        node.style.backgroundImage= "url('"+source+"thumb_party_main_1.png')"
                         ev.target.appendChild(node)
                     }
                     else if('unison'== text_class){                 
                         const source = localStorage.getItem('dragtitle')
                         var node= document.createElement('img')
-                        node.setAttribute("src",source+'square_1.png')
+                        node.setAttribute("src",'assets/ui/border_unison.png')
+                        node.style.backgroundImage= "url('"+source+"thumb_party_unison_1.png')"
                         ev.target.appendChild(node)
                     }
                 }
@@ -94,13 +96,16 @@ function start(){
                     if('equipments'== text_class){
                         const source = localStorage.getItem('dragtitle')
                         var node= document.createElement('img')
-                        node.setAttribute("src",source+'.png')
+                        node.setAttribute('src','assets/ui/border_fire.png')
+                        node.style.backgroundImage= "url('"+source+".png')"
                         ev.target.appendChild(node)
                     }
                     else if('ability-soul'== text_class){                 
                         const source = localStorage.getItem('dragtitle')
                         var node= document.createElement('img')
-                        node.setAttribute("src",source+'_soul.png')
+                        node.setAttribute("src",'assets/ui/border_dark.png')
+                        node.style.backgroundImage= "url('"+source+"_soul.png')"
+                        console.log(node)
                         ev.target.appendChild(node)
                     }
                 }
@@ -108,7 +113,7 @@ function start(){
             dropzone.addEventListener('click', (ev) => {
                 console.log(ev.target.nodeName) 
                 if(ev.target.nodeName=="IMG")
-                    ev.target.style.display= "none"
+                    ev.target.remove()
             })
         });
     }
