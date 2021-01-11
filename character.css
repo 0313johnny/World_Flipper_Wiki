@@ -1,4 +1,5 @@
 .main_container {
+    top: 80px;
     position: absolute;
     /* display: grid;
     grid-gap: 10px 10px; */
@@ -32,6 +33,9 @@
     /* opacity: 0.75; */
   }
   .content .left-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
     width: 555px;
     height: 658px;
     position: relative;
