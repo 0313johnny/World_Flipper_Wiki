@@ -57,7 +57,8 @@
 }
 
 #main-container .content .mid-content .teammate .main{
-    border: 2px solid black;
+    background-image: url('assets/ui/border_main.png');
+    background-size: 120px 253px;
     border-radius: 21px;
     position: absolute;
     left:30px;
@@ -67,6 +68,7 @@
     transition: all 0.3s;
 }
 #main-container .content .mid-content .teammate .main img{
+    
     background-size: 120px 253px;
     border-radius: 20px;
     width:120px;
@@ -74,7 +76,8 @@
     transform: translate(-1.9px,-1.9px);
 }
 #main-container .content .mid-content .teammate .equipments{
-    border: 2px solid black;
+    background-image: url('assets/ui/border_fire.png');
+    background-size: 80px 80px;
     border-radius: 10px;
     position: absolute;
     left:120px;
@@ -93,8 +96,8 @@
     border-radius: 5px;
 }
 #main-container .content .mid-content .teammate .unison{
-    
-    border: 2px solid black;
+    background-image: url('assets/ui/border_unison.png');
+    background-size: 80px 105px;
     border-radius: 20px;
     position: absolute;
     left:120px;
@@ -114,7 +117,8 @@
     z-index: 2;
 }
 #main-container .content .mid-content .teammate .ability-soul{
-    border: 2px solid black;
+    background-image: url('assets/ui/border_dark.png');
+    background-size: 60px 60px;
     border-radius: 10px;
     position: absolute;
     left:80px;

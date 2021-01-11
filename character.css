@@ -1,8 +1,12 @@
 .main_container {
-    display: grid;
-    grid-gap: 10px 10px;
+    position: absolute;
+    /* display: grid;
+    grid-gap: 10px 10px; */
 }
-
+.main_container img{
+  width:50px;
+  margin: 3px;
+}
 .sub_container {
   display: flex;
   justify-content: center;
@@ -41,7 +45,8 @@
     z-index: 1;
     width: 91px;
     height: 91px;
-    background-image: url(/assets/images/char_detail_char1_sd_bg.png?61e204e6);
+    /* 無用的連結 */
+    /* background-image: url('/assets/images/char_detail_char1_sd_bg.png?61e204e6'); */
     background-repeat: no-repeat;
     background-position: center top;
     background-color: transparent;
