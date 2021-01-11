@@ -1,11 +1,27 @@
+.main_container {
+    display: grid;
+    grid-gap: 10px 10px;
+}
+
+.sub_container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  top: 80px;
+  /* left: 50%; */
+  position: absolute;
+}
+
 .content{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     width: 920px;
-    top: 80px;
+    top: 0px;
     margin: 0 auto;
     position: relative;
+    background-color: white;
+    /* opacity: 0.75; */
   }
   .content .left-content {
     width: 555px;
