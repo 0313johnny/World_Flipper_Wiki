@@ -31,18 +31,18 @@ nav ul > li {
 }
 li a {
     font-weight:bold;
-    font-size:25px;
+    /* font-size:25px; */
     width:140px;
     text-align: center;
     text-decoration: none;
     color:black;
-    display:block;
+    /* display:block; */
 }
-li a:hover{
+/* li a:hover{
     background-color: #9ea5a7;
     display:inline-block;
-    color:white;
-}
+    color:white; */
+/* } */
 .main_list{
     border:1px solid #cee3e9;
     background:#f1f7f9; 
