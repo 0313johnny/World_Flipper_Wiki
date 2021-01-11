@@ -1,8 +1,9 @@
-.content {
+.content{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     width: 920px;
+    top: 80px;
     margin: 0 auto;
     position: relative;
   }
