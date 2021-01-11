@@ -75,17 +75,19 @@ function start(){
                 ev.target.style.transform= "scale(1)";
                 dragid=localStorage.getItem('dragid')
                 if(dragid== 'character'){
-                    console.log(ev.target.className, text_class)
+                    console.log(ev.target.cｚlassName, text_class)
                     if('main'== text_class){
                         const source = localStorage.getItem('dragtitle')
                         var node= document.createElement('img')
-                        node.setAttribute("src",source+'thumb_party_main_0.png')
+                        node.style.backgroundImage= 'url("'+source+'thumb_party_main_0.png")'
+                        node.setAttribute("src","assets/ui/border_main.png")
                         ev.target.appendChild(node)
                     }
                     else if('unison'== text_class){                 
                         const source = localStorage.getItem('dragtitle')
                         var node= document.createElement('img')
-                        node.setAttribute("src",source+'thumb_party_unison_1.png')
+                        node.style.backgroundImage= 'url("'+source+'thumb_party_unison_1.png")'
+                        node.setAttribute("src",'assets/ui/border_unison.png')
                         ev.target.appendChild(node)
                     }
                 }
@@ -93,14 +95,17 @@ function start(){
                     if('equipments'== text_class){
                         const source = localStorage.getItem('dragtitle')
                         var node= document.createElement('img')
-                        node.setAttribute("src",source+'.png')
+                        node.setAttribute("src","assets/ui/border_fire.png")
+                        node.style.backgroundImage='url("'+source+'.png")'
                         ev.target.appendChild(node)
                     }
                     else if('ability-soul'== text_class){                 
                         const source = localStorage.getItem('dragtitle')
                         var node= document.createElement('img')
-                        node.setAttribute("src",source+'_soul.png')
+                        node.setAttribute("src",'assets/ui/border_dark.png')
+                        node.style.backgroundImage='url("'+source+'_soul.png")'
                         ev.target.appendChild(node)
+                        // ev.target.style.border= "none"
                     }
                 }
             })
