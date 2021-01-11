@@ -17,57 +17,100 @@ function start(){
     display();
     // document.addEventListener("mousedown", show_imformation, false);
     // document.addEventListener("mouseover", show_little_block, false);
+    drag_drop('equipments', 'equipments')
+    drag_drop('character', 'main')
+    drag_drop('character', 'unison')
+    drag_drop('equipments', 'ability-soul')
+    
+    function drag_drop(text_id, text_class){
+        let dragzones = document.querySelectorAll('#'+text_id);
+        console.log(dragzones)
+        dragzones.forEach((dragzone) => {
+            console.log(dragzone)
+            dragzone.addEventListener('dragstart', (ev) => {
+                localStorage.setItem("dragtitle",ev.target.title)
+                localStorage.setItem("dragid",ev.target.id)
+                console.log("dragstart", ev.target.id)
+                // ev.target.style.opacity = ".5";
+            });
 
-    let dragzones = document.querySelectorAll('#equipments_id');
-    console.log(dragzones)
-    dragzones.forEach((dragzone) => {
-        console.log(dragzone)
-        dragzone.addEventListener('dragstart', (ev) => {
-            ev.dataTransfer.setData('text/plain', ev.target.title);
-            console.log("dragstart")
-            // ev.target.style.opacity = ".5";
+            dragzone.addEventListener("dragend", (ev) => {
+                // ev.target.style.opacity = "";
+            });
         });
+        let dropzones = document.querySelectorAll('.'+text_class);
+        console.log(dropzones)
+        dropzones.forEach((dropzone) => {
+            
+            dropzone.addEventListener('dragenter', (ev) => {
+                ev.preventDefault();
+                return false;
+            });
+            
+            dropzone.addEventListener('dragover', (ev) => {
+                ev.preventDefault();
+                dragid=localStorage.getItem('dragid')
+                if(dragid== 'character'){
+                    console.log(localStorage.getItem("dragid"), text_class)
+                    if('main'== text_class || 'unison'== text_class){
+                        ev.target.style.transform= "scale(1.1)";
+                    }
+                }
+                else if(dragid== 'equipments'){
+                    if('equipments'== text_class || 'ability-soul'== text_class){    
+                        ev.target.style.transform= "scale(1.1)";
+                    }
+                }
+                return false;
+            });
 
-        dragzone.addEventListener("dragend", (ev) => {
-            // ev.target.style.opacity = "";
-        });
-    });
-    let dropzones = document.querySelectorAll('.equipments');
-    console.log(dropzones)
-    dropzones.forEach((dropzone) => {
-        dropzone.addEventListener('dragenter', (ev) => {
-            ev.preventDefault();
-            console.log("enter")
-            // dropzone.style.borderStyle = 'dashed';
-            return false;
-        });
-        
-        dropzone.addEventListener('dragover', (ev) => {
-            ev.preventDefault();
-            console.log("over")
-            ev.target.style.transform= "scale(1.1)";
-            return false;
-        });
+            dropzone.addEventListener('dragleave', (ev) => {
+                ev.preventDefault();
+                ev.target.style.transform= "scale(1)";
 
-        dropzone.addEventListener('dragleave', (ev) => {
-            ev.preventDefault();
-            console.log("over")
-            ev.target.style.transform= "scale(1)";
-            return false;
-        });
+                return false;
+            });
 
-        dropzone.addEventListener('drop', (ev) => {
-            ev.preventDefault()
-            const source = ev.dataTransfer.getData('text/plain')
-            var node= document.createElement('img')
-            node.setAttribute("src",source)
-            ev.target.appendChild(node)
-        })
-        // dropzone.addEventListener('click', (ev) => {
-        //     console.log(ev.target) 
-        //     ev.target.style.display= "none"
-        // })
-    });
+            dropzone.addEventListener('drop', (ev) => {
+                ev.preventDefault()
+                ev.target.style.transform= "scale(1)";
+                dragid=localStorage.getItem('dragid')
+                if(dragid== 'character'){
+                    console.log(ev.target.className, text_class)
+                    if('main'== text_class){
+                        const source = localStorage.getItem('dragtitle')
+                        var node= document.createElement('img')
+                        node.setAttribute("src",source+'thumb_party_main_0.png')
+                        ev.target.appendChild(node)
+                    }
+                    else if('unison'== text_class){                 
+                        const source = localStorage.getItem('dragtitle')
+                        var node= document.createElement('img')
+                        node.setAttribute("src",source+'square_1.png')
+                        ev.target.appendChild(node)
+                    }
+                }
+                else if(dragid== 'equipments'){
+                    if('equipments'== text_class){
+                        const source = localStorage.getItem('dragtitle')
+                        var node= document.createElement('img')
+                        node.setAttribute("src",source+'.png')
+                        ev.target.appendChild(node)
+                    }
+                    else if('ability-soul'== text_class){                 
+                        const source = localStorage.getItem('dragtitle')
+                        var node= document.createElement('img')
+                        node.setAttribute("src",source+'_soul.png')
+                        ev.target.appendChild(node)
+                    }
+                }
+            })
+            // dropzone.addEventListener('click', (ev) => {
+            //     console.log(ev.target) 
+            //     ev.target.style.display= "none"
+            // })
+        });
+    }
 }
 function display(){
     for(var i=0; i<DataBase_equipments.length; i++)
@@ -78,18 +121,17 @@ function display(){
 function createNewNode_equipments(text){
     var newE= document.createElement("img");
     var currentNode = document.getElementById( "equipments-list" );
-    newE.setAttribute("id", 'equipments_id');
+    newE.setAttribute("id", 'equipments');
     newE.setAttribute("draggable","true")
-    newE.setAttribute("title", "assets/equipments/"+text+".png");
+    newE.setAttribute("title", "assets/equipments/"+text);
     newE.setAttribute("src", "assets/equipments/"+text+".png");
-    console.log(newE)
     currentNode.appendChild( newE );
 }
 function createNewNode_character(text){
     var newE= document.createElement("img");
     var currentNode = document.getElementById( "character-list" );
-    newE.setAttribute("id", 'character_id');
-    newE.setAttribute("title", 'assets/character/"+text+"/ui/square_0.png');
+    newE.setAttribute("id", 'character');
+    newE.setAttribute("title", 'assets/character/'+text+'/ui/');
     newE.setAttribute("draggable","true")
     newE.setAttribute("src", "assets/character/"+text+"/ui/square_0.png");
     console.log(newE)
