@@ -60,7 +60,7 @@ function change_info(clicked_id){
       $('.action-dd').html(info[18].v)
       $('.skill_detail').html(info[19].v)
       $('.intro').html(info[19].v)
-      $('.left-content').html('<img src="assets/character/'+clicked_id+'/ui/full_shot_1440_1920_0.png" height="648px" >')
+      $('.left-content').html('<img src="assets/character/'+clicked_id+'/ui/full_shot_1440_1920_0.png">')
       break;
     }
   }

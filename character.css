@@ -40,11 +40,15 @@
     height: 658px;
     position: relative;
   }
-  .content .left-content .visual{
+  /* .content .left-content .visual{
     position: absolute;
     top: 0px;
     left: -40px;
     width: 672px;
+  } */
+  .content .left-content img {
+    max-height: 648px;
+    max-width: 555px;
   }
   .content .left-content .sd {
     position: absolute;
