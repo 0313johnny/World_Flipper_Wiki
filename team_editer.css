@@ -57,7 +57,7 @@
 }
 
 #main-container .content .mid-content .teammate .main{
-    border: 2px solid black;
+    /* border: 2px solid black; */
     border-radius: 21px;
     position: absolute;
     left:30px;
@@ -74,7 +74,7 @@
     transform: translate(-1.9px,-1.9px);
 }
 #main-container .content .mid-content .teammate .equipments{
-    border: 2px solid black;
+    /* border: 2px solid black; */
     border-radius: 10px;
     position: absolute;
     left:120px;
@@ -84,7 +84,7 @@
     transition: all 0.3s;
     z-index: 2;
 }
-#main-container .content .mid-content .teammate .equipments img{
+#main-container .content .mid-content .teammate .equipments img {
     background-size: 80px 80px;
     width:80px;
     height:80px;
@@ -92,9 +92,8 @@
     z-index: 2;
     border-radius: 5px;
 }
-#main-container .content .mid-content .teammate .unison{
-    
-    border: 2px solid black;
+#main-container .content .mid-content .teammate .unison {
+    /* border: 2px solid black; */
     border-radius: 20px;
     position: absolute;
     left:120px;
@@ -114,7 +113,7 @@
     z-index: 2;
 }
 #main-container .content .mid-content .teammate .ability-soul{
-    border: 2px solid black;
+    /* border: 2px solid black; */
     border-radius: 10px;
     position: absolute;
     left:80px;
