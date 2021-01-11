@@ -55,24 +55,74 @@
 }
 
 /* #main-container .content .mid-content .teammate .main */
+#main-container .content .mid-content .teammate .main{
+    border: 2px solid black;
+    border-radius: 10px;
+    position: absolute;
+    left:65px;
+    top:30px;
+    width:120px;
+    height:232px;
+    transition: all 0.3s;
+}
+#main-container .content .mid-content .teammate .main img{
+    width:120px;
+    height:232px;
+    transform: translate(-1.9px,-1.9px);
+}
 #main-container .content .mid-content .teammate .equipments{
     border: 2px solid black;
     border-radius: 10px;
-    position: relative;
+    position: absolute;
     left:155px;
-    top:100px;
+    top:90px;
     width:80px;
     height:80px;
     transition: all 0.3s;
+    z-index: 2;
 }
 #main-container .content .mid-content .teammate .equipments img{
     width:80px;
     height:80px;
     transform: translate(-1.9px,-1.9px);
+    z-index: 2;
 }
-/* #main-container .content .mid-content .teammate .unison
-#main-container .content .mid-content .teammate .ability-soul */
+#main-container .content .mid-content .teammate .unison{
+    border: 2px solid black;
+    border-radius: 10px;
+    position: absolute;
+    left:155px;
+    top:198px;
+    width:80px;
+    height:80px;
+    transition: all 0.3s;
+    z-index: 2;
+}
 
+#main-container .content .mid-content .teammate .unison img{
+    width:80px;
+    height:80px;
+    transform: translate(-1.9px,-1.9px);
+    z-index: 2;
+}
+
+#main-container .content .mid-content .teammate .ability-soul{
+    border: 2px solid black;
+    border-radius: 10px;
+    position: absolute;
+    left:115px;
+    top:290px;
+    width:60px;
+    height:60px;
+    transition: all 0.3s;
+    z-index: 2;
+}
+#main-container .content .mid-content .teammate .ability-soul img{
+    width:60px;
+    height:60px;
+    transform: translate(-1.9px,-1.9px);
+    z-index: 2;
+}
 #main-container .content .right-content {
     width: 250px;
     height: 600px;
@@ -97,6 +147,7 @@
     width: 250px;
     height: 600px;
 }
+
 #main-container .content .mid-content .save-as-image{
     position: absolute;
     align-self: flex-end;
