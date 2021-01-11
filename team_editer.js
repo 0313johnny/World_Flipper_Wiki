@@ -80,23 +80,15 @@ function start(){
                     if('main'== text_class){
                         const source = localStorage.getItem('dragtitle')
                         var node= document.createElement('img')
-<<<<<<< HEAD
                         node.setAttribute("src",'assets/ui/border_main.png')
                         node.style.backgroundImage= "url('"+source+"thumb_party_main_1.png')"
-=======
-                        node.setAttribute("src",source+'thumb_party_main_1.png')
->>>>>>> a3ffc3f75fa3230864933c9d4ba641e6de7e5298
                         ev.target.appendChild(node)
                     }
                     else if('unison'== text_class){                 
                         const source = localStorage.getItem('dragtitle')
                         var node= document.createElement('img')
-<<<<<<< HEAD
                         node.setAttribute("src",'assets/ui/border_unison.png')
                         node.style.backgroundImage= "url('"+source+"thumb_party_unison_1.png')"
-=======
-                        node.setAttribute("src",source+'thumb_party_unison_1.png')
->>>>>>> a3ffc3f75fa3230864933c9d4ba641e6de7e5298
                         ev.target.appendChild(node)
                     }
                 }
