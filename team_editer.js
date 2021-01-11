@@ -105,10 +105,11 @@ function start(){
                     }
                 }
             })
-            // dropzone.addEventListener('click', (ev) => {
-            //     console.log(ev.target) 
-            //     ev.target.style.display= "none"
-            // })
+            dropzone.addEventListener('click', (ev) => {
+                console.log(ev.target.nodeName) 
+                if(ev.target.nodeName=="IMG")
+                    ev.target.style.display= "none"
+            })
         });
     }
 }
