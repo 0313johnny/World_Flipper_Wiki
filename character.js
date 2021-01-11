@@ -58,8 +58,8 @@ function change_info(clicked_id){
       $('.cv').html('CV:'+info[20].v)
       $('.name').html(info[2].v)
       $('.action-dd').html(info[18].v)
-      $('.skill_detail').html(info[19].v)
-      $('.intro').html(info[19].v)
+      $('#skill_detail').html(info[19].v)
+      $('#intro').html(info[21].v)
       $('.visual').html('<img src="assets/character/'+clicked_id+'/ui/full_shot_1440_1920_0.png" width= "">')
       break;
     }
