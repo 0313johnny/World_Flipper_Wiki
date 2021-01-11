@@ -54,8 +54,9 @@
     background-color:deepskyblue;
 }
 
-/* #main-container .content .mid-content .teammate .main */
+            /*  ---------------- 四個小匡  ---------------- */
 #main-container .content .mid-content .teammate .main{
+    background-image: url('/assets/ui/');
     border: 2px solid black;
     border-radius: 10px;
     position: absolute;
@@ -94,14 +95,14 @@
     left:155px;
     top:198px;
     width:80px;
-    height:80px;
+    height:100px;
     transition: all 0.3s;
     z-index: 2;
 }
 
 #main-container .content .mid-content .teammate .unison img{
     width:80px;
-    height:80px;
+    height:100px;
     transform: translate(-1.9px,-1.9px);
     z-index: 2;
 }
@@ -123,6 +124,7 @@
     transform: translate(-1.9px,-1.9px);
     z-index: 2;
 }
+                        /* ------------------------- */
 #main-container .content .right-content {
     width: 250px;
     height: 600px;

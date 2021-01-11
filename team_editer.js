@@ -31,11 +31,10 @@ function start(){
                 localStorage.setItem("dragtitle",ev.target.title)
                 localStorage.setItem("dragid",ev.target.id)
                 console.log("dragstart", ev.target.id)
-                // ev.target.style.opacity = ".5";
+                ev.target.style.opacity = ".8";
             });
-
             dragzone.addEventListener("dragend", (ev) => {
-                // ev.target.style.opacity = "";
+                ev.target.style.opacity = "";
             });
         });
         let dropzones = document.querySelectorAll('.'+text_class);
@@ -86,7 +85,7 @@ function start(){
                     else if('unison'== text_class){                 
                         const source = localStorage.getItem('dragtitle')
                         var node= document.createElement('img')
-                        node.setAttribute("src",source+'square_1.png')
+                        node.setAttribute("src",source+'thumb_party_unison_1.png')
                         ev.target.appendChild(node)
                     }
                 }
