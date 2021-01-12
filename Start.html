@@ -19,6 +19,43 @@
 
         <!-- CSS -->
         <style>
+            li{
+                list-style-type: none;
+                color:rgb(48, 84, 121);
+                font-size:17px;
+            }
+            table{
+                top:55%;
+                left:50%;
+                transform: translate(-50%, -50%);
+                border-radius:10px;
+                width:380px;
+                background-color: skyblue;
+                position: absolute;
+                font-size: 13px;
+            }
+            
+            tbody td{
+                width:380px;
+                margin:10px;
+                color:rgb(92, 92, 92);
+                text-align: center;
+            }
+            thead button{
+                margin:10px;
+                width:380px;
+            }
+            tbody tr{
+                margin:10px;
+                display:none;
+            }
+            a{
+                color:rgb(75, 75, 75);
+                text-decoration-line: underline;
+            }
+            a:hover{
+                color:black;
+            }
             body{
                 background-image: url("BG_stars.png");
                 background-repeat: repeat;
@@ -38,12 +75,35 @@
     </head>
 
     <body>
-
+        
         <div class="container p-3 my-3 bg-dark text-white text-center" id="display">
             <h1>Choose the Language</h1>
             <button type="button" class="btn btn-info btn-lg zhTW"onclick="doclick(0)">日本語</button>
             <button type="button" class="btn btn-info btn-lg zhTW"onclick= "doclick(1)">繁體中文(部分資料翻譯中)</button>
         </div>
+        <table>
+            <thead >
+                <tr>
+                    <td>
+                        <button type="button" class="btn btn-info btn-lg zhTW" id= "btn" onclick= "show_info()">Information</button>
+                    </td>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr id='info'>
+                    <td><p>此頁面的只要用途為歡迎大家來到 World Flipper攻略網站,此頁面的只要用途為,加載在google sheet的表單,在載入完成之後，才可以進入其他頁面</p>
+                        <p>展示項目</p>
+                        <li>1.武器資訊表</li>
+                        <li>2.角色資訊表</li>
+                        <li>3.隊伍編輯器</li>
+                        <hr>
+                        <a href= '#'>投影片連結</a>
+                    </td>
+                </tr>
+            </tbody>
+            
+        </table>
     </body>
 
 </html>
