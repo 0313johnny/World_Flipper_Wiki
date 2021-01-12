@@ -39,6 +39,7 @@ function createNewNode_character(text){
   newE.setAttribute("class", 'character');
   // newE.setAttribute("title", 'assets/character/'+text+'/ui/');
   newE.setAttribute("src", "assets/character/"+text+"/ui/square_0.png");
+  newE.setAttribute("alt", "assets/character/"+text+"/ui/square_0.png");
   console.log(newE)
   currentNode.appendChild( newE );
 }
