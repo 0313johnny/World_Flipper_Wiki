@@ -8,3 +8,20 @@ function doclick(n){
         alert("The Page hasn't been loaded!")
     }
 }
+$('#btnn').click(function(){
+    console.log("?")
+    $('#info').css('display', 'block')
+})
+
+function show_info(){
+    if($('#info').css('display')=='block'){
+        $('#info').css('display','none')
+        $('table').css('top','55%')
+    }
+    else{
+        $('#info').css('display','block')
+        $('table').css('top','68.5%')
+    }
+        
+
+}
