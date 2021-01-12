@@ -48,20 +48,26 @@ function change_info(clicked_id){
   for(var i=0; i<DataBase_character.length; i++){
     if(DataBase_character[i][1].v == clicked_id){
       var info= DataBase_character[i]
-      $('#sex').html(info[8].v);
-      $('#pf').html(info[7].v);
-      $('#rarity').html(info[4].v);
-      $('#race').html(info[6].v);
-      $('#attr2').html(ATTR[parseInt(info[5].v)]);
-      $('#attr2').attr('class', attr_class[parseInt(info[5].v)]);
-      $('#attr1').attr('class', attr_class[parseInt(info[5].v)]);
-      $('.cv').html('CV:'+info[20].v);
-      $('.name').html(info[2].v);
-      $('#action-dd').html(info[18].v);
-      $('#skill_detail').html(info[19].v);
-      $('#intro').html(info[21].v);
+      $('#sex').html(check_null(info[8]));
+      $('#pf').html(check_null(info[7]));
+      $('#rarity').html(check_null(info[4]));
+      $('#race').html(check_null(info[6]));
+      $('#attr2').html(ATTR[parseInt(check_null(info[5]))]);
+      $('#attr2').attr('class', attr_class[parseInt(check_null(info[5]))]);
+      $('#attr1').attr('class', attr_class[parseInt(check_null(info[5]))]);
+      $('.cv').html('CV:'+check_null(info[20]));
+      $('.name').html(check_null(info[2]));
+      $('#action-dd').html(check_null(info[18]));
+      $('#skill_detail').html(check_null(info[19]));
+      $('#intro').html(check_null(info[21]));
       $('.left-content').html('<img src="assets/character/'+clicked_id+'/ui/full_shot_1440_1920_0.png">');
       break;
     }
   }
+}
+function check_null(text){
+  if(text == null)
+    return '遊戲公司尚未公布'
+  else
+    return text.v;
 }
