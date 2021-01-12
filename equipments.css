@@ -104,7 +104,7 @@ img{
     justify-content: center;
     align-items: center;
     text-justify: left;
-    position: absolute;
+    position: fixed;
 
     width: 445px;
     height: 500px;
