@@ -7,7 +7,7 @@ else
     DataBase= JSON.parse(localStorage.getItem("DataBase_equipments_CH_TW"));
 function start(){
     display();
-    document.addEventListener("mousedown", show_imformation, false);
+    document.addEventListener("mousedown", show_information, false);
     document.addEventListener("mouseover", show_little_block, false);
 }
 
@@ -48,7 +48,7 @@ function createNewNode(text){
 }
 
 // 滑鼠點下會跳到這個function
-function show_imformation(e){
+function show_information(e){
 
     // 若是沒有點到圖片，則隱藏介紹框。
     document.getElementById("info_block_set_id").style.display="none";
@@ -58,10 +58,11 @@ function show_imformation(e){
             if(DataBase[i][1].v == clicked_block.id.substr(5))
             {
                 // 顯示介紹框，以及更改內容
-                console.log(DataBase[i][1])
+                console.log(DataBase[i])
                 document.getElementById("info_block_set_id").style.display="block";
                 document.getElementById("I_name").innerHTML= "名稱："+DataBase[i][2].v;
                 document.getElementById("I_contri").innerHTML= "介紹："+DataBase[i][3].v;
+                $('#icon').attr('src','assets/equipments/'+DataBase[i][1].v+'.png');
                 break;
             }
             

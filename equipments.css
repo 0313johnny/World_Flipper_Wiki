@@ -70,8 +70,10 @@ img{
 .left-content {
     width: 135px;
 }
-.left-content .icon {
+.left-content #icon {
     top: 10px;
+    max-width:90px;
+    max-height:90px;
 }
 .right-content {
     width: 300px;
